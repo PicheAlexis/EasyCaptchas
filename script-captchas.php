@@ -1,4 +1,5 @@
 <?php
+SESSION_START();
 
 /****************************************************************
 * CAPTCHA GENERATEUR IMAGE EN PHP
@@ -71,4 +72,5 @@ imagepng($image);
 /* DESTRUCTION DE L'IMAGE LIBÉRATION DE MÉMOIRE */
 imagedestroy($image);
 
+$_SESSION['code']=$code;
 ?>
